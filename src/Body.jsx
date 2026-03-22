@@ -158,7 +158,7 @@ function Body() {
           className="max-w-400 mx-auto py-30 min-h-screen px-20"
         >
           <SubtitleSection label={`Portfolio`} title={`Projects`} />
-          <div className="grid grid-cols-3 pt-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-5 gap-4">
             <ProjectCard
               img={medtime}
               title={`MedTime`}
@@ -195,7 +195,7 @@ function Body() {
             <ProjectCard
               img={pasag_server}
               title={`Home Server`}
-              paragraph={`Headless Ubuntu server running since 2022. Hosts cloud services, media streaming, and a modded Minecraft server. Secured with ED25519 keys and managed through systemd.`}
+              paragraph={`Headless Ubuntu server running since 2022. Hosts cloud services, media streaming, and game servers. Secured with ED25519 keys and managed through systemd.`}
               codeStacks={["Ubuntu", "Bash", "SSH", "Lua", "Plex", "Sambda"]}
               github={`https://github.com/kpasag/HomeServer`}
             />
@@ -207,6 +207,11 @@ function Body() {
               github={`https://github.com/kpasag/veil-of-mysteries`}
             />
           </div>
+        </section>
+
+        {/* SKILLS */}
+        <section id="skills" className="max-w-400 mx-auto py-30 min-h-screen px-20">
+          <SubtitleSection label={`Toolkit`} title={`Skills`} />
         </section>
       </main>
     </>

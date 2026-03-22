@@ -16,16 +16,16 @@ function Navbar() {
               <a href="#projects">PROJECTS</a>
             </li>
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
-              <a href="">SKILLS</a>
+              <a href="#skills">SKILLS</a>
             </li>
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
-              <a href="">EXPERIENCE</a>
+              <a href="#experience">EXPERIENCE</a>
             </li>
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
-              <a href="">INTERESTS</a>
+              <a href="#about">ABOUT</a>
             </li>
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
-              <a href="">CONTACT</a>
+              <a href="#contact">CONTACT</a>
             </li>
           </ul>
         </div>
