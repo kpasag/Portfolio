@@ -113,12 +113,12 @@ function Body() {
             </p>
           </div>
           <div className="font-['Outfit'] text-[0.8rem] font-medium flex space-x-2">
-            <button className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-sm border border-[#B8860B] text-[#F2ECE0]">
+            <a href="#projects" className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-sm border border-[#B8860B] text-[#F2ECE0]">
               VIEW MY WORK
-            </button>
-            <button className="py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#B8860B] border border-[#B8860B] rounded-sm">
+            </a>
+            <a href="" className="py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#B8860B] border border-[#B8860B] rounded-sm">
               GET IN TOUCH
-            </button>
+            </a>
           </div>
         </section>
 
@@ -137,7 +137,7 @@ function Body() {
               github={`https://github.com/kpasag/Clashroom`}
             />
             <ProjectCard
-              img={clashroom}
+              img={healthquest}
               title={`Clashroom`}
               paragraph={`Real-time multiplayer classroom Bingo game built at HackCamp 2025. Implemented Firestore state sync and win detection, and debugged race condition issues under a tight deadline.`}
               codeStacks={["Javascript", "Firebase", "HTML", "Tailwind CSS"]}
@@ -151,14 +151,14 @@ function Body() {
               github={`https://github.com/kpasag/Clashroom`}
             />
             <ProjectCard
-              img={clashroom}
+              img={veil}
               title={`Clashroom`}
               paragraph={`Real-time multiplayer classroom Bingo game built at HackCamp 2025. Implemented Firestore state sync and win detection, and debugged race condition issues under a tight deadline.`}
               codeStacks={["Javascript", "Firebase", "HTML", "Tailwind CSS"]}
               github={`https://github.com/kpasag/Clashroom`}
             />
             <ProjectCard
-              img={clashroom}
+              img={pasag_server}
               title={`Clashroom`}
               paragraph={`Real-time multiplayer classroom Bingo game built at HackCamp 2025. Implemented Firestore state sync and win detection, and debugged race condition issues under a tight deadline.`}
               codeStacks={["Javascript", "Firebase", "HTML", "Tailwind CSS"]}
