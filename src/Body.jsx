@@ -15,13 +15,13 @@ const TITLES = [
 function ExperienceCard({ date, title, company, paragraph }) {
   return (
     <section className="flex flex-col gap-y-2 ">
-      <div className="flex items-center  gap-x-4 text-[#B8860B]">
+      <div className="flex items-center  gap-x-4 text-[#B8860B] uppercase">
         <span className="text-xl -translate-x-0.5">•</span>
         <h3>{date}</h3>
       </div>
       <div className="px-6">
-        <h2 className="text-2xl text-[#2A2318]">{title}</h2>
-        <h3 className="text-[#D4A843]">{company}</h3>
+        <h2 className="text-2xl text-[#2A2318] font-serif">{title}</h2>
+        <h3 className="text-[#B8860B] font-serif font-semibold">{company}</h3>
         <p className="text-[rgba(42,35,24,0.6)]">{paragraph}</p>
       </div>
     </section>
@@ -30,7 +30,7 @@ function ExperienceCard({ date, title, company, paragraph }) {
 
 function SkillsCard({ title, skills }) {
   return (
-    <section className="bg-[#E8E0D0] hover:bg-[#DED5C3] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] space-y-4 font-['Manrope'] h-55">
+    <section className="bg-[#E8E0D0] hover:bg-[#DED5C3] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] space-y-4 font-serif h-55">
       <h1 className="font-semibold text-[25px] text-[#D4AF37] ">{title}</h1>
       <div className="flex gap-2 text-[#ae8a2d] text-md flex-wrap">
         {skills.map((skill, index) => (
@@ -55,7 +55,7 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
       ></div>
       <div className="p-4 space-y-2">
         <div className="flex justify-between">
-          <h2 className="text-[#B8860B] text-center text-[23px] font-['Cormorant_Garamond'] font-semibold">
+          <h2 className="text-[#B8860B] text-center text-[23px] font-serif font-semibold">
             {title}
           </h2>
         </div>
@@ -104,7 +104,7 @@ function SubtitleSection({ label, title }) {
       <p className="font-['Outfit'] text-[0.7rem] uppercase tracking-[0.35em] mb-3 text-[#B8860B]">
         {label}
       </p>
-      <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light mb-4 text-[#2A2318]">
+      <h2 className="font-serif text-4xl md:text-5xl font-light mb-4 text-[#2A2318]">
         {title}
       </h2>
       <div className="w-15 h-px bg-[#B8860B] drop-shadow-sm"></div>
@@ -151,7 +151,7 @@ function Body() {
             <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)]">
               Welcome to my portfolio
             </h3>
-            <h1 className="text-[#2A2318] md:text-8xl text-6xl leading-tight font-['Newsreader']">
+            <h1 className="text-[#2A2318] md:text-8xl text-6xl leading-tight tracking-wide font-['Newsreader']">
               <span>Hi! I'm </span>
               <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37]">
                 Kyle Pasag
