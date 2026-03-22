@@ -12,11 +12,27 @@ const TITLES = [
   "DevOps Engineer",
 ];
 
+function ExperienceCard({ date, title, company, paragraph }) {
+  return (
+    <section className="flex flex-col gap-y-2 ">
+      <div className="flex items-center  gap-x-4 text-[#B8860B]">
+        <span className="text-xl -translate-x-0.5">•</span>
+        <h3>{date}</h3>
+      </div>
+      <div className="px-6">
+        <h2 className="text-2xl text-[#2A2318]">{title}</h2>
+        <h3 className="text-[#D4A843]">{company}</h3>
+        <p className="text-[rgba(42,35,24,0.6)]">{paragraph}</p>
+      </div>
+    </section>
+  );
+}
+
 function SkillsCard({ title, skills }) {
   return (
     <section className="bg-[#E8E0D0] hover:bg-[#DED5C3] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] space-y-4 font-['Manrope'] h-55">
       <h1 className="font-semibold text-[25px] text-[#D4AF37] ">{title}</h1>
-      <div className="flex gap-2 text-[#ae8a2d] text-lg flex-wrap">
+      <div className="flex gap-2 text-[#ae8a2d] text-md flex-wrap">
         {skills.map((skill, index) => (
           <p
             className="bg-[rgba(212,168,67,0.12)] px-4 py-2 border rounded-3xl border-[#D4AF37] "
@@ -39,12 +55,12 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
       ></div>
       <div className="p-4 space-y-2">
         <div className="flex justify-between">
-          <h2 className="text-[#B8860B] text-center text-[23px] font-semibold tracking-wider">
+          <h2 className="text-[#B8860B] text-center text-[23px] font-['Cormorant_Garamond'] font-semibold">
             {title}
           </h2>
         </div>
         <p className="text-[rgba(42,35,24,0.6)]">{paragraph}</p>
-        <div className="flex space-x-2 text-[#D4AF37] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] font-medium py-2 flex-wrap">
+        <div className="flex gap-2 text-[#D4AF37] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] font-medium py-2 flex-wrap text-[14px] ">
           {codeStacks.map((stack, index) => (
             <p
               className="py-1 px-2 transition-all bg-[] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#B8860B] border border-[#B8860B] rounded-sm"
@@ -55,7 +71,7 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
           ))}
         </div>
         <a
-          className="px-2 py-1 inline-flex space-x-1 transition-all bg-[#B8860B] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-lg border border-[#B8860B] text-[#F2ECE0] items-center "
+          className="px-2 py-1 inline-flex space-x-1 transition-all bg-[#B8860B] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-lg border border-[#B8860B] text-[#F2ECE0] items-center text-sm"
           href={github}
         >
           <svg
@@ -88,7 +104,7 @@ function SubtitleSection({ label, title }) {
       <p className="font-['Outfit'] text-[0.7rem] uppercase tracking-[0.35em] mb-3 text-[#B8860B]">
         {label}
       </p>
-      <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light mb-4">
+      <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light mb-4 text-[#2A2318]">
         {title}
       </h2>
       <div className="w-15 h-px bg-[#B8860B] drop-shadow-sm"></div>
@@ -240,15 +256,65 @@ function Body() {
             />
             <SkillsCard
               title={`Frameworks`}
-              skills={["React", "Node.js", "Express", "JQuery", "Ajax", "Bootstrap", "TailwindCSS"]}
+              skills={[
+                "React",
+                "Node.js",
+                "Express",
+                "JQuery",
+                "Ajax",
+                "Bootstrap",
+                "TailwindCSS",
+              ]}
             />
             <SkillsCard
               title={`Tools`}
-              skills={["Ubuntu", "SSH", "NeoVim", "Git", "VSCode", "JetBrains", "Figma", "Trello"]}
+              skills={[
+                "Ubuntu",
+                "SSH",
+                "NeoVim",
+                "Git",
+                "VSCode",
+                "JetBrains",
+                "Figma",
+                "Trello",
+              ]}
             />
             <SkillsCard
               title={`Database`}
               skills={["Firebase", "MongoDB", "PostgreSQL"]}
+            />
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section
+          id="experience"
+          className="max-w-400 mx-auto py-30 min-h-screen px-20"
+        >
+          <div className="pb-10">
+            <SubtitleSection
+              label={`Journey`}
+              title={`Experience & Education`}
+            />
+          </div>
+          <div className="space-y-10 border-l border-[#D4A843] max-w-2/3">
+            <ExperienceCard
+              date={`May 2026 - Aug 2026`}
+              title={`IT Support Intern (Co-op)`}
+              company={`Walt Disney Animation Studio`}
+              paragraph={`Supporting the technology infrastructure behind animated feature films. Working closely with the IT team on systems support, troubleshooting, and tooling.`}
+            />
+            <ExperienceCard
+              date={`Sep 2025 - May 2027 (Expected)`}
+              title={`Computer Systems Technology Diploma`}
+              company={`British Columbia Institute of Technology`}
+              paragraph={`Studying software development, database systems, networking, and digital systems. Coursework in Java OOP, C programming, relational databases, and discrete math.`}
+            />
+            <ExperienceCard
+              date={`Aug 2023 - Sep 2025`}
+              title={`IT Support Ambassador & Learning Ambassador`}
+              company={`Amazon`}
+              paragraph={`Sole night-shift IT support resolving 500+ technical issues. Also served as Learning Ambassador, training 200+ associates on systems and processes.`}
             />
           </div>
         </section>
