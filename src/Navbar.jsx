@@ -1,10 +1,7 @@
 function Navbar() {
   return (
-    <nav
-      id="home"
-      className=" font-['Newsreader'] bg-[rgba(242,236,224,0.92)]  mx-auto fixed top-0 w-full items-center border-b border-[#D4A843]"
-    >
-      <section className="max-w-8xl flex justify-between items-center py-5 px-30 mx-auto">
+    <nav className=" font-['Newsreader'] bg-[rgba(242,236,224,0.92)]  mx-auto fixed top-0 w-full items-center border-b border-[#D4A843]">
+      <section className="max-w-400 flex justify-between items-center py-5 mx-auto">
         <div>
           <h1 className="italic font-bold text-[#B8860B] drop-shadow-[0_0_8px_rgba(184,134,11,0.4)] text-3xl">
             <a href="">Kyle Pasag</a>
@@ -13,10 +10,10 @@ function Navbar() {
         <div className="flex">
           <ul className="hidden lg:flex gap-8 font-sans text-[#2A2318]/70 text-sm uppercase tracking-[0.1rem]">
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
-              <a href=".home">HOME</a>
+              <a href="#home">HOME</a>
             </li>
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
-              <a href="">PROJECTS</a>
+              <a href="#projects">PROJECTS</a>
             </li>
             <li className="hover:tracking-[0.2rem] duration-150 hover:text-[#D4A843] hover:border-b border-[D4A843]">
               <a href="">SKILLS</a>

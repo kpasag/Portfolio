@@ -7,6 +7,20 @@ const TITLES = [
   "DevOps Engineer",
 ];
 
+function SubtitleSection({ label, title }) {
+  return (
+    <>
+      <p className="font-['Outfit'] text-[0.7rem] uppercase tracking-[0.35em] mb-3 text-[#B8860B]">
+        {label}
+      </p>
+      <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light mb-4">
+        {title}
+      </h2>
+      <div className="w-15 h-px bg-[#B8860B] drop-shadow-sm"></div>
+    </>
+  );
+}
+
 function Body() {
   const [displayText, setDisplayText] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
@@ -18,7 +32,8 @@ function Body() {
 
     const timer = setTimeout(
       () => {
-        if (!isDeleting && displayText.length < currentTitle.length) { // char length
+        if (!isDeleting && displayText.length < currentTitle.length) {
+          // char length
           setDisplayText(currentTitle.slice(0, displayText.length + 1));
         } else if (!isDeleting && displayText.length === currentTitle.length) {
           setIsDeleting(true);
@@ -38,9 +53,9 @@ function Body() {
 
   return (
     <>
-      <main className="">
+      <main id="home" className="bg-[#F2ECE0]">
         {/* HERO */}
-        <section className="bg-[#F2ECE0] min-h-screen flex flex-col justify-center items-center space-y-5">
+        <section className=" min-h-screen flex flex-col justify-center items-center space-y-5">
           <div className="font-['Manrope'] flex flex-col items-center space-y-2">
             <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)]">
               Welcome to my portfolio
@@ -75,8 +90,12 @@ function Body() {
         </section>
 
         {/* PROJECTS */}
-
-
+        <section id="projects" className="max-w-400 mx-auto py-30 min-h-screen">
+          <SubtitleSection 
+          label={`Portfolio`}
+          title={`Projects`}
+          />
+        </section>
       </main>
     </>
   );
