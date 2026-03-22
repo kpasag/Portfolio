@@ -8,22 +8,26 @@ function Body() {
             <h2 className="text-[#F9F7F2] text-lg uppercase tracking-[0.2em]">
               Software Engineer
             </h2>
-            <h1 className="text-[#D4AF37] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] md:text-8xl text-6xl leading-tight italic font-['Newsreader']">
-              Kyle Pasag
+            <h1 className="text-[#F9F7F2] md:text-8xl text-6xl leading-tight italic font-['Newsreader']">
+              <span>Hi! I'm </span>
+              <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37]">
+                Kyle Pasag
+              </span>
             </h1>
             <p className="text-[#C4C6CC] text-lg max-w-1/3 text-center">
-              I've been interested in technology since I was young and I have a
-              passion for building and creating systems. Whether it's backend
-              APIs, server infrastructure, or the architecture no one ever sees,
-              I enjoy making the things that make everything else work.
+              A Computer Science student at the British Columbia
+              Institute of Technology with a background in IT support and a
+              passion for Backend, APIs & Systems Integration. I've been
+              interested in technology since I was young and I enjoy building
+              the systems that make everything else work.
             </p>
           </div>
-          <div className="uppercase flex space-x-2">
-            <button className="py-2 cursor-pointer px-4 bg-[#B8860B] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-sm border border-[#B8860B]">
-              View my work
+          <div className="font-['Outfit'] text-[0.8rem] font-medium flex space-x-2">
+            <button className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-sm border border-[#B8860B]">
+              VIEW MY WORK
             </button>
-            <button className="py-2 cursor-pointer px-4 bg-[] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#B8860B] border border-[#B8860B] rounded-sm">
-              Get in touch
+            <button className="py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[] hover:bg-amber-400 duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#B8860B] border border-[#B8860B] rounded-sm">
+              GET IN TOUCH
             </button>
           </div>
         </section>
