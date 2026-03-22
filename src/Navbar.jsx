@@ -2,16 +2,16 @@ function Navbar() {
   return (
     <nav
       id="home"
-      className=" font-['Newsreader'] bg-[#131313]/90  mx-auto fixed top-0 w-full items-center drop-shadow-xl"
+      className=" font-['Newsreader'] bg-[#1c1c18]/90  mx-auto fixed top-0 w-full items-center drop-shadow-xl border-b border-[#B8860B]/10 backdrop-blur-md"
     >
-      <section className="max-w-7xl flex justify-between items-center p-5 mx-auto">
+      <section className="max-w-8xl flex justify-between items-center py-5 px-30 mx-auto">
         <div>
-          <h1 className="italic font-bold text-[#B8860B] drop-shadow-[0_0_8px_rgba(184,134,11,0.4)] text-2xl">
+          <h1 className="italic font-bold text-[#B8860B] drop-shadow-[0_0_8px_rgba(184,134,11,0.4)] text-3xl">
             <a href="">Kyle Pasag</a>
           </h1>
         </div>
         <div className="flex">
-          <ul className="flex gap-8 font-sans text-[#e5e2e1]/70 text-sm uppercase tracking-[0.1rem]">
+          <ul className="hidden lg:flex gap-8 font-sans text-[#e5e2e1]/70 text-sm uppercase tracking-[0.1rem]">
             <li className="hover:tracking-[0.2rem] duration-300 hover:text-[#B8860B]">
               <a href=".home">HOME</a>
             </li>
@@ -32,8 +32,8 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div id="darkModeToggle" className="flex items-center">
-          <button className="cursor-pointer" >
+        <div id="darkModeToggle" className="flex items-center ">
+          <button className="cursor-pointer p-2 hover:bg-white/10 rounded-xl">
             <svg
               viewBox="0 0 24 24"
               width="24"

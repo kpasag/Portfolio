@@ -1,10 +1,13 @@
-import Navbar from './Navbar.jsx'
+import Navbar from "./Navbar.jsx";
+import Body from "./Body.jsx"
 
 function App() {
-
   return (
-    <Navbar/>
-  )
+    <>
+      <Navbar />
+      <Body />
+    </>
+  );
 }
 
-export default App
+export default App;
