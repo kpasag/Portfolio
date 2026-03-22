@@ -21,7 +21,9 @@ function ExperienceCard({ date, title, company, paragraph }) {
       </div>
       <div className="px-6">
         <h2 className="text-2xl text-[#2A2318] font-serif">{title}</h2>
-        <h3 className="text-[#B8860B] font-serif font-semibold">{company}</h3>
+        <h3 className="text-[#B8860B] font-serif font-semibold text-xl">
+          {company}
+        </h3>
         <p className="text-[rgba(42,35,24,0.6)]">{paragraph}</p>
       </div>
     </section>
@@ -59,7 +61,7 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
             {title}
           </h2>
         </div>
-        <p className="text-[rgba(42,35,24,0.6)]">{paragraph}</p>
+        <p className="text-[rgba(42,35,24,0.6)] text-md">{paragraph}</p>
         <div className="flex gap-2 text-[#D4AF37] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] font-medium py-2 flex-wrap text-[14px] ">
           {codeStacks.map((stack, index) => (
             <p
@@ -317,6 +319,52 @@ function Body() {
               paragraph={`Sole night-shift IT support resolving 500+ technical issues. Also served as Learning Ambassador, training 200+ associates on systems and processes.`}
             />
           </div>
+        </section>
+
+        {/* About */}
+        <section
+          id="about"
+          className="max-w-400 mx-auto py-30 min-h-screen px-20 flex flex-col justify-center"
+        >
+          <SubtitleSection label={`WHO I AM`} title={`About Me`} />
+          <article>
+            <div className="pt-5 font-['Manrope'] text-[rgba(42,35,24,0.6)] w-1/2 flex flex-col gap-y-5">
+              <p>
+                Technology has been a core part of my life since I built my
+                first PC at 13. What started as a personal hobby quickly grew
+                into something bigger. I've built 8 computers for friends and
+                family and set up a headless Ubuntu home server to provide cloud
+                services, media streaming, and game hosting for the people
+                around me.
+              </p>
+              <p>
+                That foundation led me to an IT Support role at Amazon, where I
+                served as the sole night-shift technician, resolving over 500
+                issues and training 200+ associates as a Learning Ambassador.
+                Working closely with Amazon's internal tools and infrastructure
+                sparked a deeper interest in software development, and I made
+                the decision to pursue it formally. I'm now studying Computer
+                Systems Technology at BCIT, with a focus on backend development,
+                systems integration, and cybersecurity.
+              </p>
+              <p>
+                My goal is to grow into a Software Engineer, Cybersecurity
+                Engineer, or DevOps Engineer. I'm drawn to the layers of
+                technology that most users never interact with: the APIs, the
+                architecture, and the infrastructure that make everything else
+                possible.
+              </p>
+              <p>
+                Outside of all that, I go snowboarding during the winter,
+                camping and fishing with friends during the summer, and
+                sometimes I like working on my car. I spend a lot of late nights
+                reading Lord of Mysteries, Red Rising, and My House of Horrors,
+                and play Elden Ring, CS2, and Little Nightmares whenever I get
+                the chance.
+              </p>
+            </div>
+            <div></div>
+          </article>
         </section>
       </main>
     </>
