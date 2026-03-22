@@ -100,6 +100,8 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
   );
 }
 
+// function ContactCards({ svg, label, title, links})
+
 function SubtitleSection({ label, title }) {
   return (
     <>
@@ -327,8 +329,8 @@ function Body() {
           className="max-w-400 mx-auto py-30 min-h-screen px-20 flex flex-col justify-center"
         >
           <SubtitleSection label={`WHO I AM`} title={`About Me`} />
-          <article>
-            <div className="pt-5 font-['Manrope'] text-[rgba(42,35,24,0.6)] w-1/2 flex flex-col gap-y-5">
+          <article className="flex gap-4 pt-5">
+            <div className="font-['Manrope'] text-[rgba(42,35,24,0.6)] w-1/2 flex flex-col gap-y-5 py-5">
               <p>
                 Technology has been a core part of my life since I built my
                 first PC at 13. What started as a personal hobby quickly grew
@@ -363,8 +365,22 @@ function Body() {
                 the chance.
               </p>
             </div>
-            <div></div>
+            <div className="w-1/2 p-2 ">
+              <img
+                className="rounded-2xl drop-shadow-xl w-2/3 mx-auto"
+                src="https://fastly.picsum.photos/id/103/2592/1936.jpg?hmac=aC1FT3vX9bCVMIT-KXjHLhP6vImAcsyGCH49vVkAjPQ"
+                alt=""
+              />
+            </div>
           </article>
+        </section>
+
+        {/* Contact */}
+        <section
+          id="contact"
+          className="max-w-400 mx-auto py-30 min-h-screen px-20"
+        >
+          <SubtitleSection label={`Let's Connect`} title={`Contact Me`} />
         </section>
       </main>
     </>
