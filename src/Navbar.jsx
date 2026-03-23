@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className=" font-['Newsreader'] bg-[rgba(242,236,224,0.92)]  mx-auto fixed top-0 w-full items-center border-b border-[#D4A843] px-20">
+    <nav className=" font-['Newsreader'] bg-[rgba(242,236,224,0.90)]  mx-auto fixed top-0 w-full items-center border-b border-[#D4A843] px-20 z-50">
       <section className="max-w-400 flex justify-between items-center py-5 mx-auto">
         <div>
           <h1 className="italic font-bold text-[#B8860B] drop-shadow-[0_0_8px_rgba(184,134,11,0.4)] text-3xl">
