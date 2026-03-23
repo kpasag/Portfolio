@@ -1,6 +1,6 @@
 # Kyle Pasag - Portfolio
 
-Personal portfolio site themed after Elden Ring. Light mode draws from the Golden Order. Dark mode comes from the Full Moon.
+This is a personal portfolio site themed after Elden Ring. Light mode is based on the Golden Order colour scheme (Radagon/Marika), while dark mode is based on the Full Moon colour scheme (Ranni/Rennala).
 
 **Live site:** [kylepasag.dev](https://kylepasag.dev)
 

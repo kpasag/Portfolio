@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
+
+// For projects
 import clashroom from "./assets/Clashroom.png";
 import medtime from "./assets/Dashboard.png";
 import healthquest from "./assets/HealthQuest.png";
 import veil from "./assets/VeilOfMysteries.png";
 import pasag_server from "./assets/pasag_server.png";
+import portfolio from "./assets/portfolio.png"
+
+// For about
 import third_pic from "./assets/IMG_9592.webp";
 import snowboarding from "./assets/snowboarding.webp";
 import car from "./assets/car.PNG";
@@ -360,6 +365,13 @@ function Body() {
               codeStacks={["Python"]}
               github={`https://github.com/kpasag/veil-of-mysteries`}
             />
+            <ProjectCard
+              img={portfolio}
+              title={`Personal Portfolio`}
+              paragraph={`A personal portfolio site themed after Elden Ring. Light mode uses the Golden Order palette (Radagon/Marika); dark mode uses the Full Moon palette (Ranni/Rennala).`}
+              codeStacks={["React", "TailwindCSS", "HTML"]}
+              github={`https://github.com/kpasag/Portfolio`}
+            />
           </div>
         </section>
 
@@ -369,7 +381,7 @@ function Body() {
           className="flex flex-col justify-center max-w-400 mx-auto py-30 min-h-screen  px-10 lg:px-20"
         >
           <SubtitleSection label={`Toolkit`} title={`Skills`} />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-8 gap-x-5 md:gap-x-10 pt-5">
             <SkillsCard
               title={`Languages`}
