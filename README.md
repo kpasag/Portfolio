@@ -1,16 +1,35 @@
-# React + Vite
+# Kyle Pasag - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site themed after Elden Ring. Light mode draws from the Golden Order. Dark mode comes from the Full Moon.
 
-Currently, two official plugins are available:
+**Live site:** [kylepasag.dev](https://kylepasag.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React
+- Tailwind CSS v4
+- Vite
+- Deployed on Netlify
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Dual theme system** with localStorage persistence and OS preference fallback via `matchMedia`
+- **No flash on load** thanks to an inline script in `index.html` that applies the theme before the first paint
+- **Dynamic favicon** that swaps between a sun and moon icon to match the active theme
+- **Image carousel** built from scratch with React state (no external library)
+- **Typing animation** cycling through roles and interests
+- **Smooth scrolling** navigation without hash pollution in the URL
+- **Responsive layout** with mobile-adjusted background positioning and scaling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running Locally
+
+```
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+npm install
+npm run dev
+```
+
+## Footer
+
+> Light mode blessed by the Erdtree. Dark mode by Rennala. No summons were used in the making of this site.
