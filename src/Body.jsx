@@ -161,10 +161,10 @@ function Body() {
                 Kyle Pasag
               </span>
             </h1>
-            <h2 className="text-[#D4A843] text-lg uppercase tracking-[0.2em] pb-6">
+            <h2 className="text-[#D4A843] text-lg uppercase tracking-[0.2em] pb-6 font-['Outfit']">
               <span>ASPIRING </span>
               {displayText}
-              <span className="animate-pulse">|</span>
+              <span className="text-xl animate-blink">|</span>
             </h2>
             <p className="text-[rgba(42,35,24,0.6)] text-lg max-w-1/3 text-center">
               A Computer Science student at the British Columbia Institute of
