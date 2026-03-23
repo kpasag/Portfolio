@@ -1,6 +1,6 @@
 # Kyle Pasag - Portfolio
 
-Personal portfolio site themed after Elden Ring. Light mode draws from the Erdtree's golden warmth. Dark mode channels Rennala's Full Moon with cold blues against a deep night sky.
+Personal portfolio site themed after Elden Ring. Light mode draws from the Golden Order. Dark mode comes from the Full Moon.
 
 **Live site:** [kylepasag.dev](https://kylepasag.dev)
 
