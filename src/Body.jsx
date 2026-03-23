@@ -567,7 +567,7 @@ function Body() {
                 </svg>
               }
               title={`LinkedIn`}
-              links={`https://github.com/kpasag`}
+              links={`https://www.linkedin.com/in/kyle-pasag/`}
             />
             <ContactCards
               svg={
