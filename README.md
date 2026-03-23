@@ -32,4 +32,4 @@ npm run dev
 
 ## Footer
 
-> Light mode blessed by the Erdtree. Dark mode by Rennala. No summons were used in the making of this site.
+> This website is heavily inspried by Elden Ring. No summons were used in the making of this site.
