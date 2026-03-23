@@ -273,12 +273,12 @@ function Body() {
             {/* <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8]">
               Welcome to my portfolio
             </h3> */}
-            <h2 className="text-[#D4A843] dark:text-[#A8C4E0] text-lg tracking-[0.2em] pb-6 font-['Manrope'] font-semibold">
+            <h2 className="text-[#D4A843] dark:text-[#A8C4E0] text-lg sm:tracking-[0.2em] pb-6 font-['Manrope'] font-semibold">
               <span>Aspiring </span>
               {displayText}
               <span className="text-xl animate-blink font-light">|</span>
             </h2>
-            <h1 className="text-[#2A2318] dark:text-[#F2ECE0] lg:text-8xl sm:text-6xl md:text-7xl text-5xl leading-tight tracking-wide font-['Newsreader'] md:text-wrap">
+            <h1 className="text-[#2A2318] dark:text-[#F2ECE0] lg:text-8xl sm:text-6xl md:text-7xl text-4xl leading-tight tracking-wide font-['Newsreader'] text-wrap text-center">
               <span>Hi! I'm </span>
               <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37] dark:text-[#A8C4E0]">
                 Kyle Pasag
@@ -290,7 +290,7 @@ function Body() {
               Backend, APIs & Systems Integration.
             </p>
           </div>
-          <div className="relative z-10 font-['Outfit'] text-[0.8rem] font-medium flex space-x-2">
+          <div className="relative z-10 font-['Outfit'] text-[0.8rem] font-medium sm:flex-row flex-col flex gap-x-2 sm:gap-y-0 gap-y-2">
             <a
               href="#projects"
               className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] dark:bg-[#6B8CAE] hover:bg-[#F2ECE0] dark:hover:bg-[#A8C4E0] hover:text-[#B8860B] dark:hover:text-[#0F172A] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] rounded-sm border border-[#B8860B] dark:border-[#6B8CAE] text-[#F2ECE0] dark:text-[#0F172A]"
