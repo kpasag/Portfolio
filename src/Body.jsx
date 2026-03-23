@@ -266,7 +266,7 @@ function Body() {
     <>
       <main id="home" className="bg-[#F2ECE0] dark:bg-[#0F172A]">
         {/* HERO */}
-        <section className="relative min-h-screen flex flex-col justify-center items-center space-y-5 dark:bg-[url(fullmoon_clean.png)] dark:bg-no-repeat dark:bg-position-[center_top] lg:dark:bg-position-[center_right_-30px] dark:bg-size-[400%_auto] lg:dark:bg-size-[110%_auto]">
+        <section className="relative min-h-screen flex flex-col justify-center items-center space-y-5 dark:bg-[url(/fullmoon_clean.png)] dark:bg-no-repeat dark:bg-position-[center_top] lg:dark:bg-position-[center_right_-30px] dark:bg-size-[400%_auto] lg:dark:bg-size-[110%_auto]">
           <div className="absolute inset-0 bg-[#0F172A]/60 hidden dark:block h-screen" />
 
           <div className="relative z-10 font-['Manrope'] flex flex-col items-center space-y-2">
