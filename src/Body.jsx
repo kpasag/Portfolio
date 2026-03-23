@@ -39,7 +39,7 @@ function SkillsCard({ title, skills }) {
       <div className="flex gap-2 text-[#ae8a2d] text-md flex-wrap">
         {skills.map((skill, index) => (
           <p
-            className="bg-[rgba(212,168,67,0.12)] px-4 py-2 border rounded-3xl border-[#D4AF37] "
+            className="bg-[rgba(212,168,67,0.12)] px-4 py-2 transition-all hover:bg-[#B8860B] hover:text-[#F2ECE0] duration-300 text-[#B8860B] border border-[#B8860B] rounded-md"
             key={index}
           >
             {skill}
