@@ -21,7 +21,7 @@ function DarkModeToggle() {
   return (
     <button
       onClick={() => setDark(!dark)}
-      className="cursor-pointer p-2 hover:bg-white/10 rounded-xl"
+      className="cursor-pointer p-2 hover:bg-gray-700/10 hover:text-[#F2ECE0] dark:hover:bg-white/10 rounded-xl text-[#ffca28]"
     >
       {dark ? (
         <svg
@@ -83,6 +83,7 @@ function DarkModeToggle() {
           </g>
         </svg>
       ) : (
+        // #ffca28 #ffe082 #ffb300
         <svg
           xmlns="http://www.w3.org/2000/svg"
           x="0px"

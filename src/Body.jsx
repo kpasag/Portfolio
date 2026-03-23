@@ -4,6 +4,9 @@ import medtime from "./assets/Dashboard.png";
 import healthquest from "./assets/HealthQuest.png";
 import veil from "./assets/VeilOfMysteries.png";
 import pasag_server from "./assets/pasag_server.png";
+import third_pic from "./assets/IMG_9592.webp";
+import snowboarding from "./assets/snowboarding.webp";
+import car from "./assets/car.PNG";
 
 const TITLES = [
   "Software Engineer",
@@ -11,6 +14,99 @@ const TITLES = [
   "Backend Developer",
   "DevOps Engineer",
 ];
+
+function Carousel({ images }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+
+  const next = () => setCurrent((c) => (c + 1) % images.length);
+
+  return (
+    <div className="relative w-full">
+      <div className="relative h-120 overflow-hidden rounded-lg">
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              i === current ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <img
+              src={src}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt={`Slide ${i + 1}`}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-3 h-3 rounded-full ${
+              i === current ? "bg-white" : "bg-white/50"
+            }`}
+            aria-label={`Slide ${i + 1}`}
+          />
+        ))}
+      </div>
+
+      <button
+        onClick={prev}
+        className="absolute top-0 inset-s-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60">
+          <svg
+            className="w-5 h-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m15 19-7-7 7-7"
+            />
+          </svg>
+        </span>
+      </button>
+
+      <button
+        onClick={next}
+        className="absolute top-0 inset-e-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60">
+          <svg
+            className="w-5 h-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m9 5 7 7-7 7"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+  );
+}
 
 function ExperienceCard({ date, title, company, paragraph }) {
   return (
@@ -20,7 +116,9 @@ function ExperienceCard({ date, title, company, paragraph }) {
         <h3>{date}</h3>
       </div>
       <div className="px-6">
-        <h2 className="text-2xl text-[#2A2318] dark:text-[#F2ECE0] font-serif">{title}</h2>
+        <h2 className="text-2xl text-[#2A2318] dark:text-[#F2ECE0] font-serif">
+          {title}
+        </h2>
         <h3 className="text-[#B8860B] dark:text-[#A8C4E0] font-serif font-semibold text-xl">
           {company}
         </h3>
@@ -34,8 +132,10 @@ function ExperienceCard({ date, title, company, paragraph }) {
 
 function SkillsCard({ title, skills }) {
   return (
-    <section className="bg-[#E8E0D0] dark:bg-[#1E293B] hover:bg-[#DED5C3] dark:hover:bg-[#243044] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] dark:border-[rgba(74,111,140,0.3)] space-y-4 font-serif h-55">
-      <h1 className="font-semibold text-[25px] text-[#D4AF37] dark:text-[#A8C4E0] ">{title}</h1>
+    <section className="bg-[#E8E0D0] dark:bg-[#1E293B] hover:bg-[#DED5C3] dark:hover:bg-[#243044] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] dark:border-[rgba(74,111,140,0.3)] space-y-4 font-serif h-60 lg:h-55">
+      <h1 className="font-semibold text-[25px] text-[#D4AF37] dark:text-[#A8C4E0] ">
+        {title}
+      </h1>
       <div className="flex gap-2 text-[#ae8a2d] dark:text-[#A8C4E0] text-md flex-wrap">
         {skills.map((skill, index) => (
           <p
@@ -63,7 +163,9 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
             {title}
           </h2>
         </div>
-        <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-md">{paragraph}</p>
+        <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-md">
+          {paragraph}
+        </p>
         <div className="flex gap-2 text-[#D4AF37] dark:text-[#A8C4E0] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] font-medium py-2 flex-wrap text-[14px] ">
           {codeStacks.map((stack, index) => (
             <p
@@ -164,29 +266,31 @@ function Body() {
     <>
       <main id="home" className="bg-[#F2ECE0] dark:bg-[#0F172A]">
         {/* HERO */}
-        <section className=" min-h-screen flex flex-col justify-center items-center space-y-5">
-          <div className="font-['Manrope'] flex flex-col items-center space-y-2">
-            <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8]">
+        <section className="relative min-h-screen flex flex-col justify-center items-center space-y-5 dark:bg-[url(fullmoon_clean.png)] dark:bg-no-repeat dark:bg-position-[center_top] lg:dark:bg-position-[center_right_-30px] dark:bg-size-[400%_auto] lg:dark:bg-size-[110%_auto]">
+          <div className="absolute inset-0 bg-[#0F172A]/60 hidden dark:block h-screen" />
+
+          <div className="relative z-10 font-['Manrope'] flex flex-col items-center space-y-2">
+            {/* <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8]">
               Welcome to my portfolio
-            </h3>
-            <h1 className="text-[#2A2318] dark:text-[#F2ECE0] md:text-8xl text-6xl leading-tight tracking-wide font-['Newsreader']">
-              <span>Hi! I'm </span>
-              <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37] dark:text-[#A8C4E0]">
-                Kyle Pasag
-              </span>
-            </h1>
+            </h3> */}
             <h2 className="text-[#D4A843] dark:text-[#A8C4E0] text-lg tracking-[0.2em] pb-6 font-['Manrope'] font-semibold">
               <span>Aspiring </span>
               {displayText}
               <span className="text-xl animate-blink font-light">|</span>
             </h2>
+            <h1 className="text-[#2A2318] dark:text-[#F2ECE0] lg:text-8xl sm:text-6xl md:text-7xl text-5xl leading-tight tracking-wide font-['Newsreader'] md:text-wrap">
+              <span>Hi! I'm </span>
+              <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37] dark:text-[#A8C4E0]">
+                Kyle Pasag
+              </span>
+            </h1>
             <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-lg max-w-1/2 font-['Manrope'] text-center">
               A Computer Science student at the British Columbia Institute of
               Technology with a background in IT support and a passion for
               Backend, APIs & Systems Integration.
             </p>
           </div>
-          <div className="font-['Outfit'] text-[0.8rem] font-medium flex space-x-2">
+          <div className="relative z-10 font-['Outfit'] text-[0.8rem] font-medium flex space-x-2">
             <a
               href="#projects"
               className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] dark:bg-[#6B8CAE] hover:bg-[#F2ECE0] dark:hover:bg-[#A8C4E0] hover:text-[#B8860B] dark:hover:text-[#0F172A] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] rounded-sm border border-[#B8860B] dark:border-[#6B8CAE] text-[#F2ECE0] dark:text-[#0F172A]"
@@ -205,10 +309,10 @@ function Body() {
         {/* PROJECTS */}
         <section
           id="projects"
-          className="max-w-400 mx-auto py-30 min-h-screen px-20"
+          className="max-w-400 mx-auto py-30 min-h-screen  px-10 md:px-20"
         >
           <SubtitleSection label={`Portfolio`} title={`Projects`} />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-5 gap-y-2 md:gap-4">
             <ProjectCard
               img={medtime}
               title={`MedTime`}
@@ -262,10 +366,11 @@ function Body() {
         {/* SKILLS */}
         <section
           id="skills"
-          className="flex flex-col justify-center max-w-400 mx-auto py-30 min-h-screen px-20"
+          className="flex flex-col justify-center max-w-400 mx-auto py-30 min-h-screen  px-10 lg:px-20"
         >
           <SubtitleSection label={`Toolkit`} title={`Skills`} />
-          <div className="grid grid-cols-2 gap-y-8 gap-x-10 pt-5">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-8 gap-x-5 md:gap-x-10 pt-5">
             <SkillsCard
               title={`Languages`}
               skills={["Java", "Python", "C", "JavaScript", "SQL", "HTML/CSS"]}
@@ -305,7 +410,7 @@ function Body() {
         {/* Experience */}
         <section
           id="experience"
-          className="max-w-400 mx-auto py-30 min-h-screen px-20"
+          className="max-w-400 mx-auto py-30 min-h-screen  px-10 md:px-20"
         >
           <div className="pb-10">
             <SubtitleSection
@@ -313,7 +418,7 @@ function Body() {
               title={`Experience & Education`}
             />
           </div>
-          <div className="space-y-10 border-l border-[#D4A843] dark:border-[#4A6F8C] max-w-2/3">
+          <div className="space-y-10 border-l border-[#D4A843] dark:border-[#4A6F8C] md:max-w-2/3">
             <ExperienceCard
               date={`May 2026 - Aug 2026`}
               title={`IT Support Intern (Co-op)`}
@@ -338,11 +443,11 @@ function Body() {
         {/* About */}
         <section
           id="about"
-          className="max-w-400 mx-auto py-30 min-h-screen px-20 flex flex-col justify-center"
+          className="max-w-400 mx-auto py-30 min-h-screen  px-10 md:px-20 flex flex-col justify-center"
         >
           <SubtitleSection label={`WHO I AM`} title={`About Me`} />
-          <article className="flex gap-4 pt-5">
-            <div className="font-['Manrope'] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] w-1/2 flex flex-col gap-y-5 py-5">
+          <article className="flex md:flex-row flex-col gap-4 pt-5">
+            <div className="font-['Manrope'] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] md:w-1/2 flex flex-col gap-y-5 py-5">
               <p>
                 Technology has been a core part of my life since I built my
                 first PC at 13. What started as a personal hobby quickly grew
@@ -377,12 +482,8 @@ function Body() {
                 the chance.
               </p>
             </div>
-            <div className="w-1/2 p-2 ">
-              <img
-                className="rounded-2xl drop-shadow-xl w-2/3 mx-auto"
-                src="https://fastly.picsum.photos/id/103/2592/1936.jpg?hmac=aC1FT3vX9bCVMIT-KXjHLhP6vImAcsyGCH49vVkAjPQ"
-                alt=""
-              />
+            <div className="h-full w-full md:w-1/3 p-2 mx-auto">
+              <Carousel images={[snowboarding, third_pic, car]} />
             </div>
           </article>
         </section>
@@ -390,18 +491,18 @@ function Body() {
         {/* Contact */}
         <section
           id="contact"
-          className="max-w-400 mx-auto py-30 px-20 flex flex-col"
+          className="max-w-400 mx-auto py-30  px-10 lg::px-20 flex flex-col"
         >
           <SubtitleSection label={`Let's Connect`} title={`Contact Me`} />
 
-          <div className="pt-5 w-1/2">
+          <div className="pt-5 md:w-3/4 lg:w-1/2">
             <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] font-['Manrope']">
               I'm always open to new opportunities, collaborations, or just a
               good conversation about tech. Feel free to reach out through any
               of the links below.
             </p>
           </div>
-          <div className="w-2/3 flex pt-5 gap-5">
+          <div className="w-2/3 flex pt-5 gap-5 flex-wrap">
             <ContactCards
               svg={
                 <svg
