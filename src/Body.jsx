@@ -284,7 +284,7 @@ function Body() {
                 Kyle Pasag
               </span>
             </h1>
-            <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-lg max-w-1/2 font-['Manrope'] text-center">
+            <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-md max-w-4/5 sm:text-lg sm:max-w-1/2 font-['Manrope'] text-center">
               A Computer Science student at the British Columbia Institute of
               Technology with a background in IT support and a passion for
               Backend, APIs & Systems Integration.

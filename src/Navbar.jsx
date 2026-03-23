@@ -12,9 +12,15 @@ function DarkModeToggle() {
     if (dark) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark"); // save theme in user's browser
+            document.querySelector('link[rel="icon"]').href =
+              "/favicon-dark.svg";
+
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+            document.querySelector('link[rel="icon"]').href =
+              "/favicon-light.svg";
+
     }
   }, [dark]); // <-- all the variables its checking. You can add more by [var1, var2].
 
