@@ -15,16 +15,16 @@ const TITLES = [
 function ExperienceCard({ date, title, company, paragraph }) {
   return (
     <section className="flex flex-col gap-y-2 ">
-      <div className="flex items-center  gap-x-4 text-[#B8860B] uppercase">
+      <div className="flex items-center  gap-x-4 text-[#B8860B] dark:text-[#A8C4E0] uppercase">
         <span className="text-xl -translate-x-0.5">•</span>
         <h3>{date}</h3>
       </div>
       <div className="px-6">
-        <h2 className="text-2xl text-[#2A2318] font-serif">{title}</h2>
-        <h3 className="text-[#B8860B] font-serif font-semibold text-xl">
+        <h2 className="text-2xl text-[#2A2318] dark:text-[#F2ECE0] font-serif">{title}</h2>
+        <h3 className="text-[#B8860B] dark:text-[#A8C4E0] font-serif font-semibold text-xl">
           {company}
         </h3>
-        <p className="text-[rgba(42,35,24,0.6)] font-['Manrope']">
+        <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] font-['Manrope']">
           {paragraph}
         </p>
       </div>
@@ -34,12 +34,12 @@ function ExperienceCard({ date, title, company, paragraph }) {
 
 function SkillsCard({ title, skills }) {
   return (
-    <section className="bg-[#E8E0D0] hover:bg-[#DED5C3] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] space-y-4 font-serif h-55">
-      <h1 className="font-semibold text-[25px] text-[#D4AF37] ">{title}</h1>
-      <div className="flex gap-2 text-[#ae8a2d] text-md flex-wrap">
+    <section className="bg-[#E8E0D0] dark:bg-[#1E293B] hover:bg-[#DED5C3] dark:hover:bg-[#243044] rounded-2xl p-6 border border-[rgba(184,134,11,0.2)] dark:border-[rgba(74,111,140,0.3)] space-y-4 font-serif h-55">
+      <h1 className="font-semibold text-[25px] text-[#D4AF37] dark:text-[#A8C4E0] ">{title}</h1>
+      <div className="flex gap-2 text-[#ae8a2d] dark:text-[#A8C4E0] text-md flex-wrap">
         {skills.map((skill, index) => (
           <p
-            className="bg-[rgba(212,168,67,0.12)] px-4 py-2 transition-all hover:bg-[#B8860B] hover:text-[#F2ECE0] duration-300 text-[#B8860B] border border-[#B8860B] rounded-md"
+            className="bg-[rgba(212,168,67,0.12)] dark:bg-[rgba(168,196,224,0.08)] px-4 py-2 transition-all hover:bg-[#B8860B] dark:hover:bg-[#A8C4E0] hover:text-[#F2ECE0] dark:hover:text-[#0F172A] duration-300 text-[#B8860B] dark:text-[#A8C4E0] border border-[#B8860B] dark:border-[#4A6F8C] rounded-md"
             key={index}
           >
             {skill}
@@ -52,22 +52,22 @@ function SkillsCard({ title, skills }) {
 
 function ProjectCard({ img, title, paragraph, codeStacks, github }) {
   return (
-    <section className="flex flex-col bg-[#E8E0D0] rounded-2xl h-110 font-['Manrope'] border border-[rgba(184,134,11,0.2)] hover:border-[rgba(184,134,11,0.45)] hover:bg-[#DED5C3] duration-200">
+    <section className="flex flex-col bg-[#E8E0D0] dark:bg-[#1E293B] rounded-2xl h-110 font-['Manrope'] border border-[rgba(184,134,11,0.2)] dark:border-[rgba(74,111,140,0.3)] hover:border-[rgba(184,134,11,0.45)] dark:hover:border-[rgba(74,111,140,0.6)] hover:bg-[#DED5C3] dark:hover:bg-[#243044] duration-200">
       <div
         style={{ backgroundImage: `url(${img})` }}
         className="md:w-full h-48 bg-cover bg-top bg-no-repeat overflow-hidden p-4 rounded-t-2xl"
       ></div>
       <div className="p-4 space-y-2">
         <div className="flex justify-between">
-          <h2 className="text-[#B8860B] text-center text-[23px] font-serif font-semibold">
+          <h2 className="text-[#B8860B] dark:text-[#A8C4E0] text-center text-[23px] font-serif font-semibold">
             {title}
           </h2>
         </div>
-        <p className="text-[rgba(42,35,24,0.6)] text-md">{paragraph}</p>
-        <div className="flex gap-2 text-[#D4AF37] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] font-medium py-2 flex-wrap text-[14px] ">
+        <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-md">{paragraph}</p>
+        <div className="flex gap-2 text-[#D4AF37] dark:text-[#A8C4E0] drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] font-medium py-2 flex-wrap text-[14px] ">
           {codeStacks.map((stack, index) => (
             <p
-              className="py-1 px-2 transition-all bg-[] hover:bg-[#B8860B] hover:text-[#F2ECE0] duration-300 text-[#B8860B] border border-[#B8860B] rounded-sm"
+              className="py-1 px-2 transition-all bg-[] hover:bg-[#B8860B] dark:hover:bg-[#A8C4E0] hover:text-[#F2ECE0] dark:hover:text-[#0F172A] duration-300 text-[#B8860B] dark:text-[#A8C4E0] border border-[#B8860B] dark:border-[#4A6F8C] rounded-sm"
               key={index}
             >
               {stack}
@@ -75,7 +75,7 @@ function ProjectCard({ img, title, paragraph, codeStacks, github }) {
           ))}
         </div>
         <a
-          className="px-2 py-1 inline-flex space-x-1 transition-all bg-[#B8860B] hover:bg-[#F2ECE0] hover:text-[#B8860B] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-lg border border-[#B8860B] text-[#F2ECE0] items-center text-sm"
+          className="px-2 py-1 inline-flex space-x-1 transition-all bg-[#B8860B] dark:bg-[#6B8CAE] hover:bg-[#F2ECE0] dark:hover:bg-[#A8C4E0] hover:text-[#B8860B] dark:hover:text-[#0F172A] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] rounded-lg border border-[#B8860B] dark:border-[#6B8CAE] text-[#F2ECE0] dark:text-[#0F172A] items-center text-sm"
           href={github}
         >
           <svg
@@ -106,7 +106,7 @@ function ContactCards({ svg, title, links }) {
   return (
     <section>
       <a
-        className="px-6 py-3 flex items-center gap-x-2 border border-[#B8860B] rounded-sm hover:bg-[#B8860B] hover:text-[#F2ECE0] duration-300 transition-colors text-[#B8860B]"
+        className="px-6 py-3 flex items-center gap-x-2 border border-[#B8860B] dark:border-[#4A6F8C] rounded-sm hover:bg-[#B8860B] dark:hover:bg-[#6B8CAE] hover:text-[#F2ECE0] dark:hover:text-[#0F172A] duration-300 transition-colors text-[#B8860B] dark:text-[#A8C4E0]"
         href={links}
       >
         {svg}
@@ -119,13 +119,13 @@ function ContactCards({ svg, title, links }) {
 function SubtitleSection({ label, title }) {
   return (
     <>
-      <p className="font-['Outfit'] text-[0.7rem] uppercase tracking-[0.35em] mb-3 text-[#B8860B]">
+      <p className="font-['Outfit'] text-[0.7rem] uppercase tracking-[0.35em] mb-3 text-[#B8860B] dark:text-[#A8C4E0]">
         {label}
       </p>
-      <h2 className="font-serif text-4xl md:text-5xl font-light mb-4 text-[#2A2318]">
+      <h2 className="font-serif text-4xl md:text-5xl font-light mb-4 text-[#2A2318] dark:text-[#F2ECE0]">
         {title}
       </h2>
-      <div className="w-15 h-px bg-[#B8860B] drop-shadow-sm"></div>
+      <div className="w-15 h-px bg-[#B8860B] dark:bg-[#4A6F8C] drop-shadow-sm"></div>
     </>
   );
 }
@@ -162,25 +162,25 @@ function Body() {
 
   return (
     <>
-      <main id="home" className="bg-[#F2ECE0]">
+      <main id="home" className="bg-[#F2ECE0] dark:bg-[#0F172A]">
         {/* HERO */}
         <section className=" min-h-screen flex flex-col justify-center items-center space-y-5">
           <div className="font-['Manrope'] flex flex-col items-center space-y-2">
-            <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)]">
+            <h3 className="font-['Outfit'] uppercase tracking-[0.3em] text-[1.0rem] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8]">
               Welcome to my portfolio
             </h3>
-            <h1 className="text-[#2A2318] md:text-8xl text-6xl leading-tight tracking-wide font-['Newsreader']">
+            <h1 className="text-[#2A2318] dark:text-[#F2ECE0] md:text-8xl text-6xl leading-tight tracking-wide font-['Newsreader']">
               <span>Hi! I'm </span>
-              <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37]">
+              <span className="drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#D4AF37] dark:text-[#A8C4E0]">
                 Kyle Pasag
               </span>
             </h1>
-            <h2 className="text-[#D4A843] text-lg tracking-[0.2em] pb-6 font-['Outfit']">
+            <h2 className="text-[#D4A843] dark:text-[#A8C4E0] text-lg tracking-[0.2em] pb-6 font-['Manrope'] font-semibold">
               <span>Aspiring </span>
               {displayText}
               <span className="text-xl animate-blink font-light">|</span>
             </h2>
-            <p className="text-[rgba(42,35,24,0.6)] text-lg max-w-1/2 font-['Manrope'] text-center">
+            <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] text-lg max-w-1/2 font-['Manrope'] text-center">
               A Computer Science student at the British Columbia Institute of
               Technology with a background in IT support and a passion for
               Backend, APIs & Systems Integration.
@@ -189,13 +189,13 @@ function Body() {
           <div className="font-['Outfit'] text-[0.8rem] font-medium flex space-x-2">
             <a
               href="#projects"
-              className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] hover:bg-[#F2ECE0] hover:text-[#B8860B] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] rounded-sm border border-[#B8860B] text-[#F2ECE0]"
+              className=" py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[#B8860B] dark:bg-[#6B8CAE] hover:bg-[#F2ECE0] dark:hover:bg-[#A8C4E0] hover:text-[#B8860B] dark:hover:text-[#0F172A] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] rounded-sm border border-[#B8860B] dark:border-[#6B8CAE] text-[#F2ECE0] dark:text-[#0F172A]"
             >
               VIEW MY WORK
             </a>
             <a
               href="#contact"
-              className="py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[] hover:bg-[#B8860B] hover:text-[#F2ECE0] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] text-[#B8860B] border border-[#B8860B] rounded-sm"
+              className="py-3.5 cursor-pointer px-9 tracking-[0.15em] transition-all bg-[] hover:bg-[#B8860B] dark:hover:bg-[#A8C4E0] hover:text-[#F2ECE0] dark:hover:text-[#0F172A] duration-300 hover:drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(168,196,224,0.3)] text-[#B8860B] dark:text-[#A8C4E0] border border-[#B8860B] dark:border-[#4A6F8C] rounded-sm"
             >
               GET IN TOUCH
             </a>
@@ -313,7 +313,7 @@ function Body() {
               title={`Experience & Education`}
             />
           </div>
-          <div className="space-y-10 border-l border-[#D4A843] max-w-2/3">
+          <div className="space-y-10 border-l border-[#D4A843] dark:border-[#4A6F8C] max-w-2/3">
             <ExperienceCard
               date={`May 2026 - Aug 2026`}
               title={`IT Support Intern (Co-op)`}
@@ -342,7 +342,7 @@ function Body() {
         >
           <SubtitleSection label={`WHO I AM`} title={`About Me`} />
           <article className="flex gap-4 pt-5">
-            <div className="font-['Manrope'] text-[rgba(42,35,24,0.6)] w-1/2 flex flex-col gap-y-5 py-5">
+            <div className="font-['Manrope'] text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] w-1/2 flex flex-col gap-y-5 py-5">
               <p>
                 Technology has been a core part of my life since I built my
                 first PC at 13. What started as a personal hobby quickly grew
@@ -395,7 +395,7 @@ function Body() {
           <SubtitleSection label={`Let's Connect`} title={`Contact Me`} />
 
           <div className="pt-5 w-1/2">
-            <p className="text-[rgba(42,35,24,0.6)] font-['Manrope']">
+            <p className="text-[rgba(42,35,24,0.6)] dark:text-[#94A3B8] font-['Manrope']">
               I'm always open to new opportunities, collaborations, or just a
               good conversation about tech. Feel free to reach out through any
               of the links below.
