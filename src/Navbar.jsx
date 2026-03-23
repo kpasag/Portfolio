@@ -9,9 +9,6 @@ function DarkModeToggle() {
 
   // useEffect updates when a variable its checking updates. In this case it's checking for every update for dark.
   useEffect(() => {
-    document
-      .querySelector('meta[name="theme-color"]')
-      .setAttribute("content", dark ? "#0F172A" : "#F2ECE0");
     if (dark) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark"); // save theme in user's browser
