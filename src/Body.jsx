@@ -6,7 +6,7 @@ import medtime from "./assets/Dashboard.png";
 import healthquest from "./assets/HealthQuest.png";
 import veil from "./assets/VeilOfMysteries.png";
 import pasag_server from "./assets/pasag_server.png";
-import portfolio from "./assets/portfolio.png"
+import portfolio from "./assets/portfolio.png";
 
 // For about
 import third_pic from "./assets/IMG_9592.webp";
@@ -144,7 +144,7 @@ function SkillsCard({ title, skills }) {
       <div className="flex gap-2 text-[#ae8a2d] dark:text-[#A8C4E0] text-md flex-wrap">
         {skills.map((skill, index) => (
           <p
-            className="bg-[rgba(212,168,67,0.12)] dark:bg-[rgba(168,196,224,0.08)] px-4 py-2 transition-all hover:bg-[#B8860B] dark:hover:bg-[#A8C4E0] hover:text-[#F2ECE0] dark:hover:text-[#0F172A] duration-300 text-[#B8860B] dark:text-[#A8C4E0] border border-[#B8860B] dark:border-[#4A6F8C] rounded-md"
+            className="bg-[rgba(227,192,111,0.14)] dark:bg-[rgba(168,196,224,0.08)] px-4 py-2 transition-all hover:bg-[#B8860B] dark:hover:bg-[#A8C4E0] hover:text-[#F2ECE0] dark:hover:text-[#0F172A] duration-300 text-[#B8860B] dark:text-[#A8C4E0] border border-[#B8860B] dark:border-[#4A6F8C] rounded-md"
             key={index}
           >
             {skill}
@@ -157,10 +157,10 @@ function SkillsCard({ title, skills }) {
 
 function ProjectCard({ img, title, paragraph, codeStacks, github }) {
   return (
-    <section className="flex flex-col bg-[#E8E0D0] dark:bg-[#1E293B] rounded-2xl h-110 font-['Manrope'] border border-[rgba(184,134,11,0.2)] dark:border-[rgba(74,111,140,0.3)] hover:border-[rgba(184,134,11,0.45)] dark:hover:border-[rgba(74,111,140,0.6)] hover:bg-[#DED5C3] dark:hover:bg-[#243044] duration-200">
+    <section className="flex flex-col bg-[#E8E0D0] dark:bg-[#1E293B] rounded-2xl h-140 font-['Manrope'] border border-[rgba(184,134,11,0.2)] dark:border-[rgba(74,111,140,0.3)] hover:border-[rgba(184,134,11,0.45)] dark:hover:border-[rgba(74,111,140,0.6)] hover:bg-[#DED5C3] dark:hover:bg-[#243044] duration-200">
       <div
         style={{ backgroundImage: `url(${img})` }}
-        className="md:w-full h-48 bg-cover bg-top bg-no-repeat overflow-hidden p-4 rounded-t-2xl"
+        className="md:w-full h-80 bg-cover bg-top bg-no-repeat overflow-hidden p-4 rounded-t-2xl"
       ></div>
       <div className="p-4 space-y-2">
         <div className="flex justify-between">
@@ -317,7 +317,7 @@ function Body() {
           className="max-w-400 mx-auto py-30 min-h-screen  px-10 md:px-20"
         >
           <SubtitleSection label={`Portfolio`} title={`Projects`} />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-5 gap-y-2 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-5 gap-y-4 md:gap-y-8 gap-x-5 md:gap-x-10">
             <ProjectCard
               img={medtime}
               title={`MedTime`}
@@ -330,6 +330,13 @@ function Body() {
                 "Tailwind CSS",
               ]}
               github={`https://github.com/kpasag/MedTime`}
+            />
+            <ProjectCard
+              img={pasag_server}
+              title={`Home Server`}
+              paragraph={`Headless Ubuntu server running since 2022. Hosts cloud services, media streaming, and game servers. Secured with ED25519 keys and managed through systemd.`}
+              codeStacks={["Ubuntu", "Bash", "SSH", "Lua", "Plex", "Sambda"]}
+              github={`https://github.com/kpasag/HomeServer`}
             />
             <ProjectCard
               img={healthquest}
@@ -350,13 +357,6 @@ function Body() {
               paragraph={`Real-time multiplayer classroom Bingo game built at HackCamp 2025. Implemented Firestore state sync and win detection, and debugged race condition issues under a tight deadline.`}
               codeStacks={["Javascript", "Firebase", "HTML", "Tailwind CSS"]}
               github={`https://github.com/kpasag/Clashroom`}
-            />
-            <ProjectCard
-              img={pasag_server}
-              title={`Home Server`}
-              paragraph={`Headless Ubuntu server running since 2022. Hosts cloud services, media streaming, and game servers. Secured with ED25519 keys and managed through systemd.`}
-              codeStacks={["Ubuntu", "Bash", "SSH", "Lua", "Plex", "Sambda"]}
-              github={`https://github.com/kpasag/HomeServer`}
             />
             <ProjectCard
               img={veil}
@@ -385,7 +385,16 @@ function Body() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-8 gap-x-5 md:gap-x-10 pt-5">
             <SkillsCard
               title={`Languages`}
-              skills={["Java", "Python", "C", "JavaScript", "SQL", "HTML/CSS"]}
+              skills={[
+                "Java",
+                "Python",
+                "C",
+                "JavaScript",
+                "SQL",
+                "HTML/CSS",
+                "Bash",
+                "Lua",
+              ]}
             />
             <SkillsCard
               title={`Frameworks`}
@@ -486,12 +495,12 @@ function Body() {
                 possible.
               </p>
               <p>
-                Outside of all that, I go snowboarding during the winter,
-                camping and fishing with friends during the summer, and
-                sometimes I like working on my car. I spend a lot of late nights
-                reading Lord of Mysteries, Red Rising, and My House of Horrors,
-                and play Elden Ring, CS2, and Little Nightmares whenever I get
-                the chance.
+                Outside of all that, I recently picked up snowboarding as a
+                winter hobby, and during the summer I go camping and fishing
+                with friends. Sometimes I like working on my car. I spend a lot
+                of late nights reading Lord of Mysteries, Red Rising, and My
+                House of Horrors, and play Elden Ring, CS2, and Little
+                Nightmares whenever I get the chance.
               </p>
             </div>
             <div className="h-full w-full md:w-1/3 p-2 mx-auto">
